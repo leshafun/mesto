@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto Russia</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <img class="header__logo" src="./images/header-logo.svg" alt="Логотип - Mesto Russia">
+    </header>
+    <main class="content">
+        <section class="profile">
+            <div class="profile__avatar">
+                <img class="profile__image" src="./images/profile-image.jpg" alt="Аватарка">
+            </div>
+            <div class="profile__info">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <button type="button" class="profile__edit-button"></button>
+                <p class="profile__description">Исследователь океана</p>
+            </div>
+            <button type="button" class="profile__add-button"></button>
+        </section>
+        <section class="elements">
+            <div class="element">
+                <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg"
+                    alt="Кот с поднятой лапкой">
+                <div class="element__container">
+                    <h2 class="element__title">Карачаевск</h2>
+                    <button type="button" class="element__like-button element__like-button_active"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора на закате">
+                <div class="element__container">
+                    <h2 class="element__title">Гора Эльбрус</h2>
+                    <button type="button" class="element__like-button element__like-button_active"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Гора в снегу">
+                <div class="element__container">
+                    <h2 class="element__title">Домбай</h2>
+                    <button type="button" class="element__like-button element__like-button_active"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора на закате">
+                <div class="element__container">
+                    <h2 class="element__title">Гора Эльбрус</h2>
+                    <button type="button" class="element__like-button element__like-button_active"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Гора в снегу">
+                <div class="element__container">
+                    <h2 class="element__title">Домбай</h2>
+                    <button type="button" class="element__like-button element__like-button_active"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Старинный замок">
+                <div class="element__container">
+                    <h2 class="element__title">Карачаево-Черкесия</h2>
+                    <button type="button" class="element__like-button element__like-button_active"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy;2022. Алексей Радюкевич</p>
+    </footer>
+
+    <div class="popup popup__edit-profile">
+        <div class="popup__container">
+            <button type="button" class="popup__button-close"></button>
+            <h3 class="popup__title">Редактировать профиль</h3>
+            <form class="popup__form" method="post" action="#" novalidate>
+                <label class="popup__label" for="username">
+                    <input class="popup__input" type="text" name="username" id="username" placeholder="Имя пользователя"
+                        required>
+                </label>
+                <label class="popup__label" for="description">
+                    <input class="popup__input" type="text" name="description" id="description"
+                        placeholder="Описание профиля" required>
+                </label>
+                <button type="submit" class="popup__button-save">Сохранить</button>
+            </form>
+        </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
