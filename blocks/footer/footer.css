@@ -13,5 +13,6 @@
     .footer {
         width: calc(100% - 38px);
         font-size: 14px;
+        margin-bottom: 36px;
     }
 }
