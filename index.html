@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    <title>Mesto Russia</title>
+    <title>Место Россия</title>
 </head>
 
 <body class="page">
@@ -14,9 +14,7 @@
     </header>
     <main class="content">
         <section class="profile">
-            <div class="profile__avatar">
-                <img class="profile__image" src="./images/profile-image.jpg" alt="Аватарка">
-            </div>
+            <img class="profile__image" src="./images/profile-image.jpg" alt="Аватарка">
             <div class="profile__info">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
                 <button type="button" class="profile__edit-button"></button>
@@ -78,15 +76,11 @@
         <div class="popup__container">
             <button type="button" class="popup__button-close"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
-            <form class="popup__form" method="post" action="#" novalidate>
-                <label class="popup__label" for="username">
-                    <input class="popup__input" type="text" name="username" id="username" placeholder="Имя пользователя"
-                        required>
-                </label>
-                <label class="popup__label" for="description">
-                    <input class="popup__input" type="text" name="description" id="description"
-                        placeholder="Описание профиля" required>
-                </label>
+            <form name="profile-form" class="popup__form" method="post" action="#" novalidate>
+                <input class="popup__input" type="text" name="username" id="username" placeholder="Имя пользователя"
+                    required>
+                <input class="popup__input" type="text" name="description" id="description"
+                    placeholder="Описание профиля" required>
                 <button type="submit" class="popup__button-save">Сохранить</button>
             </form>
         </div>

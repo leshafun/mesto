@@ -1,6 +1,5 @@
 .elements {
     max-width: 880px;
-    min-height: 744px;
     margin: 51px auto 67px;
     display: flex;
     flex-direction: row;
@@ -12,5 +11,7 @@
     .elements {
         width: 100%;
         justify-content: center;
+        margin-top: 36px;
+        margin-bottom: 48px;
     }
 }
