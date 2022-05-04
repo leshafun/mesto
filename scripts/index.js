@@ -2,7 +2,7 @@ const popupButtonOpen = document.querySelector('.profile__edit-button');
 
 const popupButtonAddImage = document.querySelector('.profile__add-button');
 
-const popupEditProfile = document.querySelector('.popup__edit-profile');
+const popupEditProfile = document.querySelector('.popup_edit-profile');
 
 const popupButtonClose = popupEditProfile.querySelector('.popup__button-close');
 
@@ -16,7 +16,7 @@ const popupUserName = formEditProfile.querySelector('#username');
 
 const popupDescription = formEditProfile.querySelector('#description');
 
-const popupAddImage = document.querySelector('.popup__add-image');
+const popupAddImage = document.querySelector('.popup_add-image');
 
 const popupButtonCloseAddImage = popupAddImage.querySelector('#popup__button-close');
 
