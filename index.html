@@ -47,28 +47,25 @@
             <button type="button" class="popup__button-close" id="popup__button-close"></button>
             <h3 class="popup__title">Новое место</h3>
             <form name="add-image" class="popup__form" id="popup__add-image" method="post" action="#" novalidate>
-                <input class="popup__input" type="text" name="name" id="image-name" placeholder="Название"
-                       required>
-                <input class="popup__input" type="url" name="link" id="link"
-                       placeholder="Ссылка на картинку" required>
+                <input class="popup__input" type="text" name="name" id="image-name" placeholder="Название" required>
+                <input class="popup__input" type="url" name="link" id="link" placeholder="Ссылка на картинку" required>
                 <button type="submit" class="popup__button-save">Создать</button>
             </form>
         </div>
     </div>
 
-    <div class="popup popup__show-image">
+    <div class="popup popup_show-image">
         <div class="popup__container-image">
             <button type="button" class="popup__button-close popup__button-close-image"></button>
-        <img src="#" class="popup__image" alt="Картинка не открылась">
-        <h3 class="popup__image-title"></h3>
+            <img src="#" class="popup__image" alt="Картинка не открылась">
+            <h3 class="popup__image-title"></h3>
         </div>
     </div>
 
     <template class="element-template">
         <div class="element">
             <button type="button" class="element__delete-button"></button>
-            <img class="element__image" src="#"
-                 alt="УПС! Картинка не загрузилась :(">
+            <img class="element__image" src="#" alt="УПС! Картинка не загрузилась :(">
             <div class="element__container">
                 <h2 class="element__title"></h2>
                 <button type="button" class="element__like-button"></button>
@@ -80,4 +77,3 @@
 </body>
 
 </html>
-

@@ -20,7 +20,7 @@ const popupAddImage = document.querySelector('.popup_add-image');
 
 const popupButtonCloseAddImage = popupAddImage.querySelector('#popup__button-close');
 
-const popupShowImage = document.querySelector('.popup__show-image');
+const popupShowImage = document.querySelector('.popup_show-image');
 
 const popupButtonCloseImage = document.querySelector('.popup__button-close-image');
 
@@ -130,7 +130,7 @@ const inputAddLink = document.querySelector('#link');
 
 function handleSubmitAddFormImage(e) {
     e.preventDefault();
-    renderInitialCards({name: inputAddImageName.value, link: inputAddLink.value});
+    renderInitialCards({ name: inputAddImageName.value, link: inputAddLink.value });
     inputAddImageName.value = "";
     inputAddLink.value = "";
 };
@@ -179,7 +179,7 @@ const renderInitialCards = (cardsData) => {
 
 initialCards.forEach((cardsData) => {
     renderInitialCards(cardsData);
-    });
+});
 
 // Добавление карточки
 
