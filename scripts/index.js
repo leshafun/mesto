@@ -1,10 +1,10 @@
-const popupButtonOpen = document.querySelector('.profile__edit-button');
+const popupButtonOpenProfileEdit = document.querySelector('.profile__edit-button');
 
 const popupButtonAddImage = document.querySelector('.profile__add-button');
 
-const popupEditProfile = document.querySelector('.popup_edit-profile');
+const popup = document.querySelector('.popup');
 
-const popupButtonClose = popupEditProfile.querySelector('.popup__button-close');
+const popupButtonCloseEditProfile = popup.querySelector('.popup__button-close');
 
 const profileName = document.querySelector('.profile__name');
 
@@ -31,22 +31,22 @@ const popupImageTitle = popupShowImage.querySelector('.popup__image-title');
 
 // Открытие, закрытие попапа
 
-function openPopup(popupEditProfile) {
-    popupEditProfile.classList.add('popup_open');
+function openPopup(popup) {
+    popup.classList.add('popup_open');
 };
 
-function closePopup(popupEditProfile) {
-    popupEditProfile.classList.remove('popup_open');
+function closePopup(popup) {
+    popup.classList.remove('popup_open');
 };
 
 function openPopupProfile() {
     popupUserName.value = profileName.textContent;
     popupDescription.value = profileDescription.textContent;
-    openPopup(popupEditProfile);
+    openPopup(popup);
 };
 
 function closePopupProfile() {
-    closePopup(popupEditProfile);
+    closePopup(popup);
 };
 
 function openPopupAddImage() {
@@ -63,18 +63,18 @@ function closePopupImage() {
 
 // Сохранение информации введенную в форму попапа
 
-function onSubmitHandler(e) {
+function handleProfileFormSubmit(e) {
     e.preventDefault();
     profileName.textContent = popupUserName.value;
     profileDescription.textContent = popupDescription.value;
-    closePopup(popupEditProfile);
+    closePopup(popup);
 };
 
-popupButtonOpen.addEventListener('click', openPopupProfile);
+popupButtonOpenProfileEdit.addEventListener('click', openPopupProfile);
 
-popupButtonClose.addEventListener('click', closePopupProfile);
+popupButtonCloseEditProfile.addEventListener('click', closePopupProfile);
 
-formEditProfile.addEventListener('submit', onSubmitHandler);
+formEditProfile.addEventListener('submit', handleProfileFormSubmit);
 
 popupButtonAddImage.addEventListener('click', openPopupAddImage);
 
@@ -130,17 +130,18 @@ const inputAddLink = document.querySelector('#link');
 
 function handleSubmitAddFormImage(e) {
     e.preventDefault();
-    renderInitialCards({ name: inputAddImageName.value, link: inputAddLink.value });
+    renderCards({ name: inputAddImageName.value, link: inputAddLink.value });
     inputAddImageName.value = "";
     inputAddLink.value = "";
+    closePopupAddImage();
 };
 
 const deleteCardsTemplate = (e) => {
     e.target.closest('.element').remove();
 };
 
-const likeButton = (e) => {
-    e.target.closest('.element__like-button').classList.toggle('element__like-button_active');
+const toggleLike = (e) => {
+    e.target.classList.toggle('element__like-button_active');
 };
 
 // Генерация карточки
@@ -151,34 +152,37 @@ const generateCards = (cardsData) => {
     const imageCards = newCards.querySelector('.element__image');
     titleCards.textContent = cardsData.name;
     imageCards.src = cardsData.link;
+    imageCards.alt = cardsData.name;
 
     const deleteButtonImage = newCards.querySelector('.element__delete-button');
     deleteButtonImage.addEventListener('click', deleteCardsTemplate);
 
     const activeLikeButton = newCards.querySelector('.element__like-button');
-    activeLikeButton.addEventListener('click', likeButton);
+    activeLikeButton.addEventListener('click', toggleLike);
 
     function openPopupImage(newCards) {
         popupImageTitle.textContent = cardsData.name;
+        popupImage.alt = cardsData.name;
         popupImage.src = cardsData.link;
         openPopup(popupShowImage);
     }
 
     imageCards.addEventListener('click', openPopupImage);
 
-    closePopupAddImage();
+
 
     return newCards;
 };
 
+
 // Рендер карточки
 
-const renderInitialCards = (cardsData) => {
+const renderCards = (cardsData) => {
     cardsContainer.prepend(generateCards(cardsData));
 };
 
 initialCards.forEach((cardsData) => {
-    renderInitialCards(cardsData);
+    renderCards(cardsData);
 });
 
 // Добавление карточки
