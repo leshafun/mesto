@@ -29,14 +29,18 @@ const popupImage = popupShowImage.querySelector('.popup__image');
 const popupImageTitle = popupShowImage.querySelector('.popup__image-title');
 
 
+
+
 // Открытие, закрытие попапа
 
-function openPopup(element) {
-    element.classList.add('popup_open');
+function openPopup(popup) {
+    popup.classList.add('popup_open');
+    document.addEventListener('keydown', (event) => {closePopupEsc(event, popup)});
 };
 
-function closePopup(element) {
-    element.classList.remove('popup_open');
+function closePopup(popup) {
+    popup.classList.remove('popup_open');
+    document.removeEventListener('keydown', (event) => {closePopupEsc(event, popup)});
 };
 
 function openPopupProfile() {
@@ -61,6 +65,18 @@ function closePopupImage() {
     closePopup(popupShowImage);
 }
 
+function closePopupEsc(e, popup) {
+    if(e.key === 'Escape') {
+        closePopup(popup);
+    };
+};
+
+document.addEventListener('mousedown', (evt) => {
+    if (evt.target !== evt.currentTarget){
+        closePopup(evt.target)
+    };
+});
+
 // Сохранение информации введенную в форму попапа
 
 function handleProfileFormSubmit(e) {
@@ -81,6 +97,8 @@ popupButtonAddImage.addEventListener('click', openPopupAddImage);
 popupButtonCloseAddImage.addEventListener('click', closePopupAddImage);
 
 popupButtonCloseImage.addEventListener('click', closePopupImage);
+
+
 
 // Массив кароточки
 
@@ -188,7 +206,5 @@ initialCards.forEach((cardsData) => {
 // Добавление карточки
 
 formAddImage.addEventListener('submit', handleSubmitAddFormImage);
-
-
 
 
