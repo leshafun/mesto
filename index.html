@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Место Россия</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <img class="header__logo" src="./images/header-logo.svg" alt="Логотип - Mesto Russia">
+    </header>
+    <main class="content">
+        <section class="profile">
+            <img class="profile__image" src="./images/profile-image.jpg" alt="Аватарка">
+            <div class="profile__info">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <button type="button" class="profile__edit-button"></button>
+                <p class="profile__description">Исследователь океана</p>
+            </div>
+            <button type="button" class="profile__add-button"></button>
+        </section>
+        <section class="elements"></section>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy;2022. Алексей Радюкевич</p>
+    </footer>
+
+    <div class="popup popup_edit-profile">
+        <div class="popup__container">
+            <button type="button" class="popup__button-close"></button>
+            <h3 class="popup__title">Редактировать профиль</h3>
+            <form name="profile-form" class="popup__form" method="post" action="#" novalidate>
+                <input class="popup__input" type="text" name="username" id="username" placeholder="Имя пользователя"
+                    required minlength="2" maxlength="40">
+                <span class="popup__input-error username-error"></span>
+                <input class="popup__input" type="text" name="description" id="description"
+                    placeholder="Описание профиля" required minlength="2" maxlength="200">
+                <span class="popup__input-error description-error"></span>
+                <button type="submit" class="popup__button-save">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_add-image">
+        <div class="popup__container">
+            <button type="button" class="popup__button-close" id="popup__button-close"></button>
+            <h3 class="popup__title">Новое место</h3>
+            <form name="add-image" class="popup__form" id="popup__add-image" method="post" action="#" novalidate>
+                <input class="popup__input" type="text" name="name" id="image-name" placeholder="Название" required minlength="2" maxlength="30">
+                <span class="popup__input-error image-name-error"></span>
+                <input class="popup__input" type="url" name="link" id="link" placeholder="Ссылка на картинку" required>
+                <span class="popup__input-error link-error"></span>
+                <button type="submit" class="popup__button-save">Создать</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_show-image">
+        <div class="popup__container-image">
+            <button type="button" class="popup__button-close popup__button-close-image"></button>
+            <img src="#" class="popup__image" alt="Картинка не открылась">
+            <h3 class="popup__image-title"></h3>
+        </div>
+    </div>
+
+    <template class="element-template">
+        <div class="element">
+            <button type="button" class="element__delete-button"></button>
+            <img class="element__image" src="#" alt="">
+            <div class="element__container">
+                <h2 class="element__title"></h2>
+                <button type="button" class="element__like-button"></button>
+            </div>
+        </div>
+    </template>
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
+
+</body>
+
+</html>
