@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5682fe0d-5ed0-4676-8e68-e103ab9e60a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/FormValidator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/validationSettings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/FormValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/validationSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validationSettings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +37,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/ya_practicum/sprints/sprint_7/mesto&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/JetBrains/WebStorm 2022.1/plugins/prettierJS&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.1\\plugins\\prettierJS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -63,6 +62,9 @@
       <workItem from="1654472739603" duration="1987000" />
       <workItem from="1654474755817" duration="6000" />
       <workItem from="1654491702779" duration="3562000" />
+      <workItem from="1654511821512" duration="1497000" />
+      <workItem from="1654513340383" duration="583000" />
+      <workItem from="1654514402284" duration="5622000" />
     </task>
     <servers />
   </component>
@@ -79,5 +81,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
