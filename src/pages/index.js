@@ -85,8 +85,6 @@ popupProfileInfo.setEventListeners();
 
 const userInfo = new UserInfo(".profile__name", ".profile__description");
 
-// Открытия попапа Профиля
-
 popupButtonOpenProfileEdit.addEventListener("click", () => {
   const infoProfile = userInfo.getUserInfo();
   popupUserName.value = infoProfile.name;
@@ -94,8 +92,6 @@ popupButtonOpenProfileEdit.addEventListener("click", () => {
   popupEditProfileFormValidator.resetValidation();
   popupProfileInfo.openPopup();
 });
-
-// Открытия попапа картинки
 
 popupButtonAddImage.addEventListener("click", () => {
   popupAddImageFormValidator.resetValidation();
