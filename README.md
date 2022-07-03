@@ -28,4 +28,3 @@
 ### Ссылка на сайт:
 
 - # [Mesto Russia](https://leshafun.github.io/mesto)
-- [Mesto Russia](https://leshafun.github.io/mesto)
