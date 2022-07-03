@@ -1,13 +1,14 @@
-.profile__image {
+.profile__avatar-image {
     max-width: 120px;
     min-height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 30px;
+    transition: 0.3s linear;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 705px) {
-    .profile__image {
+    .profile__avatar-image {
         margin: 0 auto 0;
     }
 }

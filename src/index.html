@@ -13,7 +13,10 @@
     </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__image" src="<%=require('../src/images/profile-image.jpg')%>" alt="Аватарка">
+            <div class="profile__avatar">
+            <img class="profile__avatar-image" src="<%=require('../src/images/profile-image.jpg')%>" alt="Аватарка">
+            <button class="profile__avatar-button"></button>
+            </div>
             <div class="profile__info">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
                 <button type="button" class="profile__edit-button"></button>
@@ -65,13 +68,36 @@
         </div>
     </div>
 
+    <div class="popup popup_delete-image">
+        <div class="popup__container">
+            <button type="button" class="popup__button-close"></button>
+        <h2 class="popup__title">Вы уверены?</h2>
+        <button class="popup__button-save">Да</button>
+        </div>
+    </div>
+
+    <div class="popup popup_add-avatar">
+        <div class="popup__container">
+            <button type="button" class="popup__button-close"></button>
+            <h3 class="popup__title">Обновить аватар</h3>
+            <form name="add-avatar" class="popup__form" method="post" action="#" novalidate>
+                <input class="popup__input" type="url" name="link" placeholder="Ссылка на картинку" required>
+                <span class="popup__input-error link-error"></span>
+                <button type="submit" class="popup__button-save">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
     <template class="element-template">
         <div class="element">
             <button type="button" class="element__delete-button"></button>
             <img class="element__image" src="#" alt="">
             <div class="element__container">
                 <h2 class="element__title"></h2>
+                <div class="element__like" >
                 <button type="button" class="element__like-button"></button>
+                <span class="element__like-numbers">0</span>
+                </div>
             </div>
         </div>
     </template>
