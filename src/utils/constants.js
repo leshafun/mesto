@@ -66,3 +66,7 @@ export const inputAddLink = document.querySelector("#link");
 export const popupButtonSaveProfile = popupEditProfile.querySelector(
   ".popup_edit-profile"
 );
+export const profileAvatarImage = document.querySelector(".profile__avatar-image");
+export const popupAddAvatar = document.querySelector(".popup_add-avatar");
+export const buttonAddAvatar = document.querySelector(".profile__avatar-button");
+
