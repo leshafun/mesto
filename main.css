@@ -14,7 +14,7 @@
 .profile__add-button{background:transparent url(bed8c136e13907f5eefb.svg) no-repeat 50%;border:2px solid #fff;border-radius:2px;cursor:pointer;height:50px;margin:auto 0 auto auto;transition:.3s linear;width:150px}.profile__add-button:hover{opacity:.6}@media screen and (max-width:930px){.profile__add-button{box-sizing:border-box;margin:0 auto;width:282px}}
 .elements{display:flex;flex-direction:row;flex-wrap:wrap;gap:20px 17px;margin:51px auto 67px;max-width:880px}@media screen and (max-width:880px){.elements{justify-content:center;margin-bottom:48px;margin-top:36px;width:100%}}
 .element{background-color:#fff;border-radius:10px;max-width:282px;position:relative}
-.element__image{background-color:#c4c4c4;border-radius:10px 10px 0 0;cursor:pointer;display:block;max-width:282px;min-height:282px}
+.element__image{background-color:#c4c4c4;border-radius:10px 10px 0 0;cursor:pointer;display:block;height:282px;-o-object-fit:cover;object-fit:cover;width:282px}
 .element__delete-button{background:transparent url(823b0cf1b0b7e9cb7cad.svg) no-repeat 50%;border:none;cursor:pointer;height:19px;position:absolute;right:20px;top:20px;width:18px}.element__delete-button:hover{opacity:.6}
 .element__container{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin:25px 15px 31px 21px;width:246px}
 .element__title{color:#000;font-size:24px;font-weight:900;line-height:1.2;margin:0;max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
