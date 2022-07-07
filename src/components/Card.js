@@ -70,10 +70,6 @@ export default class Card {
 	}
   }
 
-  /*updateCardLike() {
-	console.log('1');
-}*/
-
   _setEventListeners() {
 	this._buttonLikeToggle.addEventListener("click", () => {
 	  if (this._buttonLikeToggle.classList.contains('element__like-button_active')) {

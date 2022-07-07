@@ -166,7 +166,7 @@ const defaultCardList = new Section(
 	},
 	".elements"
 );
-//defaultCardList.renderer();
+
 
 const popupAddImageForm = new PopupWithForm({
   selector: ".popup_add-image",
